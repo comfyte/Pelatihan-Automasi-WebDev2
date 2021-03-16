@@ -1,0 +1,13 @@
+{
+  "name": "pelatihan-automasi-webdev2",
+  "version": "0.0.1",
+  "author": "Farrel R",
+  "scripts": {
+  "prettify": "gulp"
+},
+  "devDependencies": {
+  "gulp": "^4.0.2",
+  "gulp-prettier": "^3.0.0",
+  "prettier": "^2.2.1"
+}
+}

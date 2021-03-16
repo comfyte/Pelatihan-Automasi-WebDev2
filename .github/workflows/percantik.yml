@@ -1,0 +1,28 @@
+name: Percantik File Kode
+
+on: push
+
+jobs:
+  job-satu:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Siapkan kode dari repositori
+        uses: actions/checkout@v2
+        
+      - name: Siapkan Node.js
+        uses: actions/setup-node@v2.1.5
+        
+      - name: Instal dependensi
+        run: npm install
+        
+      - name: Percantik kode
+        run: npm run prettify
+        
+      - name: Push kembali file-file yang telah dipercantik ke repositori
+        run: |
+          git config user.name "Prettifier Bot"
+          git config user.email "rafirizqy@yahoo.com"
+          git add --all
+          git commit -m "Automatic code format"
+          git push
